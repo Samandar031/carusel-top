@@ -1,4 +1,4 @@
-/* * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -11,17 +11,21 @@ body {
 .tepa {
   position: absolute;
   top: 300px;
-  left: 610px;
+  left: 720px;
   background-color: aliceblue;
   padding: 10px;
+  z-index: 100;
+  position: fixed;
 }
 
 .pas {
   position: absolute;
   top: 350px;
-  left: 550px;
+  left: 670px;
   background-color: aliceblue;
   padding: 10px;
+  z-index: 100;
+  position: fixed;
 }
 
 .carusel {
@@ -31,27 +35,40 @@ body {
   display: flex;
   justify-content: space-between;
 }
+:root {
+  --height: -200;
+}
 
 .one-box {
-  height: 300vh;
-  /* border: 5px solid saddlebrown; */
-/* width: 40%; */
-/* } */
+  height: 100vh;
+  border: 5px solid saddlebrown;
+  width: 40%;
+  overflow: hidden;
+  transition: transform 0.5s ease-in-out;
+  transform: translateY(0px);
+}
 
-/* .two-box {
-  height: 300vh;
-  /* border: 5px solid saddlebrown; */
-/* width: 60%;
-} */
+.one-box > div {
+  transform: translateY(calc(var(--height) * 1vh));
+}
 
-/* .name {
+.two-box {
+  overflow: hidden;
+  height: 100vh;
+  border: 5px solid saddlebrown;
+  width: 60%;
+  transition: transform 0.5s ease-in-out;
+  transform: translateY(0px);
+}
+
+.name {
   height: 99vh;
   margin: 2px;
   display: flex;
   justify-content: center;
   align-items: center;
-} */
-/* 
+}
+
 span {
   background-color: rgb(2, 19, 19);
   padding: 10px 15px;
@@ -83,10 +100,10 @@ span {
 
 .uch {
   background-color: rgb(0, 195, 255);
-}  */
+}
 
 /* o'rganish jarayoni */
-
+/* 
 * {
   box-sizing: border-box;
 }
@@ -102,7 +119,7 @@ body {
 .container {
   width: 500px;
   height: 530px;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .img-container {
@@ -132,4 +149,4 @@ img {
   width: 500px;
   background-color: black;
   margin: 1px;
-}
+} */
