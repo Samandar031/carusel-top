@@ -45,22 +45,30 @@ let past = document.querySelector(".pas");
 let img1 = document.querySelector(".one-box");
 let img2 = document.querySelector(".two-box");
 
+let imgOne = document.getElementById("one");
+let imgTwo = document.getElementById("two");
+
 let a = 0;
 let b = 0;
 
 function ball() {
-  img1.style.transform = `translateY(${a * 1000}px)`;
-  img2.style.transform = `translateY(${-b * 1000}px)`;
+  if (a >= 3) {
+    a = 0;
+  } else if (a < 0) {
+    a = 0;
+  }
+  imgOne.style.transform = `translateY(${a * 100}vh)`;
+  imgTwo.style.transform = `translateY(${-a * 100}vh)`;
 }
 
 tepa.addEventListener("click", function () {
   a++;
-  b++;
+
   ball();
 });
 
 past.addEventListener("click", function () {
   a--;
-  b--;
+
   ball();
 });
