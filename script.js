@@ -72,3 +72,9 @@ past.addEventListener("click", function () {
 
   ball();
 });
+
+// past.addEventListener("click", function () {
+//   a--;
+
+//   ball();
+// });
